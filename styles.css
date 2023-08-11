@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+/* Color Palette */
+:root {
+  /* Primary colors */
+  --darkcyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* Neutral colors */
+  --very-dark-blue: hsl(213, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Global resets */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background: var(--cream);
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  color: var(--very-dark-blue);
+}
+h3 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--darkcyan);
+}
+p {
+  font-size: 1.4rem;
+  margin: ;
+}
+
+
+/* Card */
+
+.card {
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 15rem;
+  margin-bottom: 2rem;
+}
+
+.card__image {
+  background: url(/images/image-product-mobile.jpg);
+  height: 35vh;
+  background-size: cover;
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    max-width: 550px;
+  }
+
+  .card__image {
+    background: url(/images/image-product-desktop.jpg);
+    height: auto;
+    object-fit: cover;
+    background-size: cover;
+  }
+}
+.card__heading {
+  margin: 0;
+}
+
+.card--fraunces {
+  font-family: "Fraunces", serif;
+}
+
+.card--montserratt {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue)
+}
+.card__body {
+  padding: 2.5rem;
+  background: var(--white);
+}
+
+
+.card__price {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card--strike {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+
+
+.btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--white);
+  background: var(--darkcyan);
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.icon {
+  margin-right: .5rem;
+}
+
